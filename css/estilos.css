@@ -16,8 +16,23 @@
     width: 50%;
     display: flex;
     flex-direction: row;
-    justify-content:flex-start;  
-    
+    justify-content:flex-start;
+}
+
+.animacion { 
+     animation-name: escalar;
+     animation-iteration-count: infinite;
+     animation-duration: 10s;
+     animation-timing-function: initial;
+}
+
+@keyframes escalar {
+    from {
+        transform: scale(1.0);
+    }
+    to { 
+        transform: scale(1.4);
+    }
 }
 
 /* FIN DE LOGO O IDENTIDAD DE MARCA */
@@ -25,7 +40,7 @@
 
 body {
     background: rgb(232,237,236);
-background: linear-gradient(90deg, rgba(232,237,236,1) 0%, rgba(255,255,255,1) 70%);
+background: linear-gradient(50deg, rgba(232,237,236,1) 0%, rgba(255,255,255,1) 70%);
 }
 
 
@@ -91,12 +106,10 @@ nav ul {
     list-style: none;
 }
 
+
 .menu > li {
     position: relative;
-    
-    
-    
-    }
+}
 
 .menu > li > a { 
 
@@ -109,8 +122,11 @@ nav ul {
     text-decoration: none;
     text-transform: none;
     border-style: solid;
-    
 }
+/* ------------ animacion del menu de navegacion--------------------*/
+
+.menu li a:hover { transform: scale(1.1);}
+
 
 .subMenu {
     position: absolute;
@@ -153,7 +169,9 @@ header {
 header h1 { 
     text-align: center;
     padding-bottom: 30px;
+    padding-top: 30px;
 }
+
 
 /* -------------------------------------------/    
       FIN DE ESTILOS DEL HEADER
@@ -171,7 +189,7 @@ main {
 
 
 .parrafo  {
-    margin: 10px;
+    margin: 50px;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -179,10 +197,14 @@ main {
 
 
 div img { 
-    width: 28%;
+    padding-top: 45px;
+    width: 300px;
     display: flexbox;
+    flex-wrap: wrap;
     justify-content: center;
 }
+    
+
 
 .envio {
     text-align: center;
@@ -320,16 +342,44 @@ footer {
      / ----------------------------------*/   
     
     .productos { 
-    
-    width: 1000px ;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+        padding-top: 40px;
+        width: 1000px ;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
+
+      /* ----------------------------------/
+
+        FIN PROPIEDADES DE PRODUCTOS HTML
+     / ----------------------------------*/ 
+
+
+
+    /* -----------------------------------/
+
+      INICIO DE PROPIEDADES DE UBICACION HTML 
+
+      /---------------------------------*/
+
+      .ubicacion { 
+          text-align: center;
+          padding-top: 40px;
+      }
+
+      /* ----------------------------------/
+
+        FIN PROPIEDADES DE UBICACION  HTML
+
+     / ----------------------------------*/ 
+
+
+
+  
 
     /* ----------------- media queries ---------------------*/
      
-@media (max-width: 380px) {
+@media screen and (max-width: 380px) {
 
     h1 { display: none;}
 
@@ -337,7 +387,6 @@ footer {
         width: 5%;
     }
   
-
     .parrafo { font-size: 25px;}
 
     .shipping { display: none;}
